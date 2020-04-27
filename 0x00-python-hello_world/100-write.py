@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 import sys
-stderr = "and that piece of art is useful - Dora Korpar, 2015-10-19"
-sys.stdout.write(stderr + '\n')
+stderr = "and that piece of art is useful - Dora Korpar, 2015-10-19\n"
+sys.stdout.write(stderr)
 sys.exit(1)
