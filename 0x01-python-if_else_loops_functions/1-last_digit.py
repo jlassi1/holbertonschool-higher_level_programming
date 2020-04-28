@@ -15,4 +15,3 @@ elif number > 5:
 else:
     print("Last digit of {:d} is {:d} and is 0"
           .format(number, i))
-
