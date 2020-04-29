@@ -11,7 +11,7 @@ listint_t *new_node;
 listint_t *temp = *head, *current;
 
 
-new_node = malloc(sizeof(lisbtint_t));
+new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 return (NULL);
 new_node->n = number;
