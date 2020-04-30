@@ -6,8 +6,8 @@ if __name__ == '__main__':
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
-        a = argv[1]
-        b = argv[3]
+        a = int(argv[1])
+        b = int(argv[3])
         if argv[2] == '+':
             print("{} + {} = {}".format(a, b, add(a, b)))
         elif argv[2] == '-':
