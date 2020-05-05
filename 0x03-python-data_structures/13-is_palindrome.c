@@ -29,9 +29,8 @@ int i = 1, j = 0, x;
 	{
 		tmp = tmp->next;
 		i++;
-
 	}
-	if (i <= 1)
+	if (i < 1)
 		return (1);
 tmp = *head;
 char *array = malloc(sizeof(int) * i + 1);
