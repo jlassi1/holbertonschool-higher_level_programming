@@ -2,7 +2,7 @@
 /**
  * check_palindrome - checks array to see if palindrome
  * @arr: array of integers
- * @length: length of palindrome
+ * @len: length of palindrome
  *
  * Return: 1 if palindrome. 0 if not palindrome.
  */
@@ -55,7 +55,7 @@ int is_palindrome(listint_t **head)
 	tmp = *head;
 	if (*head == NULL)
 		return (1);
-    while (tmp != NULL)
+	while (tmp != NULL)
 	{
 		tmp = tmp->next;
 		len++;
@@ -80,3 +80,4 @@ int is_palindrome(listint_t **head)
 	return (1);
 
 }
+
