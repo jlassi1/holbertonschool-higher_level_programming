@@ -25,10 +25,11 @@ int is_palindrome(listint_t **head)
 {
 listint_t *tmp = *head;
 int i = 1, j = 0, x;
-	while (tmp)
+	while (tmp->next)
 	{
 		tmp = tmp->next;
 		i++;
+
 	}
 	if (i <= 1)
 		return (1);
