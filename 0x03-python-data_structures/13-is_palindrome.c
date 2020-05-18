@@ -11,7 +11,7 @@ int check_palindrome(int *arr, int len)
 	unsigned int i = 0;
 
 	while (arr[i] <= arr[len])
-	{
+	{   
 		if (arr[i] != arr[len])
 			return (0);
 		i++;
@@ -53,7 +53,7 @@ int is_palindrome(listint_t **head)
 	unsigned int i = 0;
 
 	tmp = *head;
-	if (*head == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
 	while (tmp != NULL)
 	{
