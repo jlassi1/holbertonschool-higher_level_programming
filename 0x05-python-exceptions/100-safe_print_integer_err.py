@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 def safe_print_integer_err(value):
-    import sys
+    from sys import stderr
     try:
         print("{:d}".format(value))
         return True
     except ValueError as err:
-        sys.stderr.write("Exception: Unknown format code \
-'d' for object of type 'str'\n")
+        stderr.write("Exception: {}\n".format(err))
         return False
     else:
         return
