@@ -27,8 +27,6 @@ class Square:
         else:
             self.__position = position
 
-        #return self.my_print()
-
     def area(self):
         """ function tha return the current square area """
         return self.__size ** 2
@@ -68,7 +66,6 @@ class Square:
         else:
             self.__position = value
 
-
     def my_print(self):
         """function that print the square with the character #: """
         if self.__size == 0:
@@ -85,12 +82,13 @@ class Square:
             print()
 
     def __str__(self):
-        """function that Return a string containing a printable representation of an object"""
+        """function that Return a string\
+        containing a printable representation of an object"""
         s = ""
         if self.__size == 0:
             return ""
         for l in range(self.__position[1]):
-            s+= '\n'
+            s += '\n'
         for i in range(self.__size):
             for j in range(self.__position[0]):
                 s += " "
