@@ -66,7 +66,7 @@ class SinglyLinkedList:
             cur_node.next_node = x_node
 
     def __str__(self):
-        """ return stringe a printable contenant data of node + \n"""
+        """ return a printable string contenant data of node + \n"""
         s = ""
         while self.__head:
             s += str(self.__head.data) + '\n'
