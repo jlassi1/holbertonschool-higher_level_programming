@@ -6,18 +6,17 @@ class Square:
     """a documentation of my class """
     def __init__(self, size=0):
         """ check if size is un interege"""
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
+        if not isinstance(size, int) and not isinstance(size, float):
+            raise TypeError('size must be an number')
         """check if size is a value > then 0"""
         if size < 0:
             raise ValueError('size must be >= 0')
         else:
-            self.__size = size
-        self = bool(size)
+            self.size = size
+
     def area(self):
         """ function tha return the current square area """
-        x = self.__size ** 2
-        return bool(x)
+        return self.__size ** 2
 
     """ the getter method """
     @property
@@ -36,6 +35,20 @@ class Square:
         else:
             self.__size = value
 
-    def __new__(cls, value):
-        x = self.__size ** 2
-        return int.__new__(cls, bool(x))
+    def __eq__(self, other):
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        return self.area() != other.area()
+
+    def __lt__(self, other):
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        return self.area() <= other.area()
+
+    def __gt__(self, other):
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        return self.area() >= other.area()
