@@ -6,14 +6,6 @@ return the sum of a + b
 """
 
 
-def check_value(x):
-    """check if the number is integer or float"""
-    if not isinstance(x, int) and not isinstance(x, float):
-        return False
-    else:
-        return True
-
-
 def add_integer(a, b=98):
     """ function that add two number a and b
     check if a and b are number
@@ -22,9 +14,9 @@ def add_integer(a, b=98):
         a = 89
     if b != b:
         b = 89
-    if not check_value(a):
+    if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
-    if not check_value(b):
+    if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
     result = a + b
     if result == float('inf') or result == -float('inf'):
