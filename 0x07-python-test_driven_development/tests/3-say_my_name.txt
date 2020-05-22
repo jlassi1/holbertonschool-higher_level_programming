@@ -30,3 +30,6 @@ My name is
 
 >>> say_my_name('k')
 My name is k 
+
+>>> say_my_name("", "")
+My name is  
