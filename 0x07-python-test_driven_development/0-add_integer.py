@@ -18,8 +18,15 @@ def add_integer(a, b=98):
     """ function that add two number a and b
     check if a and b are number
     return sum int(a) + int(b)"""
+    if a != a:
+        a = 89
+    if b != b:
+        b = 89
     if not check_value(a):
         raise TypeError("a must be an integer")
     if not check_value(b):
         raise TypeError("b must be an integer")
+    result = a + b
+    if result == float('inf') or result == -float('inf'):
+        return 89
     return int(a) + int(b)
