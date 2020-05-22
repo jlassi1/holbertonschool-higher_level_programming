@@ -17,9 +17,12 @@ def matrix_divided(matrix, div):
     if not check_matrix(matrix):
         raise TypeError("matrix must be a matrix\
  (list of lists) of integers/floats")
-    if not check_matrix_size(matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-    if not check_value(div):
+    for i in matrix:
+        if len(i) == len(matrix[0]):
+            pass
+        else:
+            raise TypeError("Each row of the matrix must have the same size")
+    if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
@@ -36,20 +39,3 @@ def check_matrix(matrix):
         if any(not isinstance(y, (int, float)) for y in i):
             return False
     return True
-
-
-def check_matrix_size(matrix):
-    for i in matrix:
-        if len(i) == len(matrix[0]):
-            pass
-        else:
-            return False
-    return True
-
-
-def check_value(x):
-    """check if the number is integer or float"""
-    if not isinstance(x, int) and not isinstance(x, float):
-        return False
-    else:
-        return True
