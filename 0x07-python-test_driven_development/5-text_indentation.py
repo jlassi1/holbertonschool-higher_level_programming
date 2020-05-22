@@ -15,10 +15,12 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     i = 0
     s = ""
-    while i < len(text) - 1:
+    while i < len(text):
         if '?' in text[i] or ':' in text[i] or '.' in text[i]:
-            s += text[i] + '\n'
+            s += text[i] + '\n\n'
             i += 2
+            if i == len(text) - 1:
+                break
         s += text[i]
         i += 1
     print("{}".format(s))
