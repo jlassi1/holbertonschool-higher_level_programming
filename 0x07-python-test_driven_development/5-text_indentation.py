@@ -23,7 +23,7 @@ def text_indentation(text):
                 break
             s += text[i] + '\n\n'
             i += 2
-           
+
         s += text[i]
         i += 1
     print("{}".format(s))
