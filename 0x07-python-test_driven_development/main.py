@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+say_my_name = __import__('3-say_my_name').say_my_name
 
-print(add_integer(float('inf')))
-print(add_integer(5, ~2))
+say_my_name()
