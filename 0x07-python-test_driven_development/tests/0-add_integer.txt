@@ -38,3 +38,16 @@ TypeError: a must be an integer
 
 >>> add_integer(add_integer(0), add_integer(5, 5))
 108
+
+>>> add_integer(float('inf'), -float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(~5)
+92
+
+>>> add_integer(~5, ~2)
+-9
+
+>>> add_integer(5, ~2)
+2

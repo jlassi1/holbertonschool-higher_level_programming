@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-matrix_divided = __import__('2-matrix_divided').matrix_divided
+add_integer = __import__('0-add_integer').add_integer
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-matrix_divided([[1, 2, 3],[4, 5, 6]], float('inf/nan'))
-print(matrix)
-
+print(add_integer(1, 2))
+print(add_integer(5, ~2))
