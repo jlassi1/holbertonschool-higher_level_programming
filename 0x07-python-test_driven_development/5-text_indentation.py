@@ -19,7 +19,6 @@ def text_indentation(text):
         string += c
         if c in ":.?":
             string += "\n\n"
-    if string[:1] not in ":.?":
-        print(string.lstrip(), end='\n')
-    else:
-        print(string.lstrip(), end='')
+            string = string.lstrip()
+    print(string.lstrip(), end='')
+
