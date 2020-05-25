@@ -8,8 +8,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
+        self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
@@ -50,10 +50,9 @@ class Rectangle:
         s = ""
         if self.__height == 0 or self.__width == 0:
             return s
-        for i in range(self.__height - 1):
+        for i in range(self.__height):
             s += str(self.print_symbol) * self.__width + '\n'
-        s += str(self.print_symbol) * self.__width
-        return s
+        return s[:-1]
 
     def __repr__(self):
         return "Rectangle(%r, %r)" % (self.__width, self.__height)
