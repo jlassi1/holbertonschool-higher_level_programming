@@ -13,12 +13,16 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    string = ""
-    for c in text.lstrip():
-        string += c
-        if c in ":.?":
-            string += "\n\n"
-            string = string.lstrip()
-    print(string.lstrip(), end='')
-
+    i = 0
+    s = ""
+    text = text.strip()
+    while i < len(text):
+        s += text[i]
+        if text[i] in ".?:":
+            s += "\n\n"
+            while i + 1 < len(text) and text[i + 1] == " ":
+                i += 1
+        i += 1
+    print(s.strip(), end='\n')
+    if s[:1] in ".?:":
+        print()
