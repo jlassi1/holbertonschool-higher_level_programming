@@ -1,18 +1,69 @@
->>> text_indentation = __import__('5-text_indentation').text_indentation
+Importing the function from the module:
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
 
->>> text_indentation("""This is a test. Is it work? we will see: Yes finally.""")
-This is a test.
-<BLANKLINE>
-Is it work?
-<BLANKLINE>
-we will see:
-<BLANKLINE>
-Yes finally.
-<BLANKLINE>
+Check: module docstring:
+    >>> a = __import__("5-text_indentation").__doc__
+    >>> len(a) > 1
+    True
 
->>> text_indentation(5)
-Traceback (most recent call last):
-TypeError: text must be a string
+Check: function docstring:
+    >>> b = __import__("5-text_indentation").text_indentation.__doc__
+    >>> len(b) > 1
+    True
 
->>> text_indentation("      hello holberton     ")
-hello holberton
+Check: no args:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Check: too many args:
+    >>> text_indentation("Hello", "Hi")
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Check: passing non-string type:
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Check: take one string:
+    >>> text_indentation("Hello")
+    Hello
+
+Check: number:
+    >>> text_indentation(3)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Check: existing newlines:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Check: nonindent inside indent
+    >>> text_indentation("?world.")
+    ?
+    <BLANKLINE>
+    world.
+    <BLANKLINE>
+
+Check: just delimeters:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
