@@ -1,0 +1,41 @@
+Importing the function from the module:
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+
+Check: module docstring:
+    >>> a = __import__("100-matrix_mul").__doc__
+    >>> len(a) > 1
+    True
+
+Check: function docstring:
+    >>> b = __import__("100-matrix_mul").matrix_mul.__doc__
+    >>> len(b) > 1
+    True
+
+Check: no args:
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Check: too many args:
+    >>> matrix_mul([[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Check: function normal:
+    >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    [[13, 16]]
+
+Check: empty matrix:
+    >>> matrix_mul([[1, 2], [3, 4]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Check: matrix of sting:
+    >>> matrix_mul([[1, 2], [3, 4]], [['k', 'l', 'm']])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b should contain only integers or floats

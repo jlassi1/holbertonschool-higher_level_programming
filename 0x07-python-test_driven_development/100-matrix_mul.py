@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-
+"""
+Matrix multiplication
+"""
 
 def matrix_mul(m_a, m_b):
+    """ function that return multiplication of two matrix"""
     i = 0
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
