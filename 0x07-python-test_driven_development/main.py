@@ -1,14 +1,5 @@
 #!/usr/bin/python3
-text_indentation = __import__('5-text_indentation').text_indentation
+max_integer = __import__('6-max_integer').max_integer
 
-text_indentation = __import__('5-text_indentation').text_indentation
-
-text_indentation("Holberton. School? How are you:    John")
-
-
-text_indentation("Holberton School")
-
-text_indentation("?\n\n.\n\n:")
-
-
-text_indentation("Holberton.School")
+print(max_integer([1, 2, 3, 4]))
+print(max_integer([1, 3, 4, 2]))
