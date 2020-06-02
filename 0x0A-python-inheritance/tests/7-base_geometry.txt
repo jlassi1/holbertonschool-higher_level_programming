@@ -27,3 +27,8 @@ TypeError: num must be an integer
 
 >>> isinstance(bg, BaseGeometry)
 True
+
+>>> bg.integer_validator("num", 0)
+Traceback (most recent call last):
+...
+ValueError: num must be greater than 0
