@@ -29,3 +29,7 @@
 >>> l = MyList([-5, 6, 0, 49652, -8541])
 >>> l.print_sorted()
 [-8541, -5, 0, 6, 49652]
+
+>>> l = MyList()
+>>> isinstance(l, MyList)
+True
