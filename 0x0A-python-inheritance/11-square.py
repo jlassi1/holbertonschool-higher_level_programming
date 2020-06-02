@@ -8,10 +8,7 @@ class Square(Rectangle):
         """initialization method"""
         self.integer_validator("size", size)
         self.__size = size
-
-    def area(self):
-        """function that return area of square"""
-        return self.__size ** 2
+        super().__init__(self.__size, self.__size)
 
     def __str__(self):
         """ the string return from class Rectangle"""
