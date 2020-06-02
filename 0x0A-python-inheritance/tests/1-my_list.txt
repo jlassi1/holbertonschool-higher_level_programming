@@ -11,7 +11,7 @@
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
->>> l = MyList()
+>>> l = MyList([])
 >>> l.print_sorted()
 []
 
@@ -32,4 +32,8 @@
 
 >>> l = MyList()
 >>> isinstance(l, MyList)
+True
+
+>>> l = MyList()
+>>> type(l) == MyList
 True
