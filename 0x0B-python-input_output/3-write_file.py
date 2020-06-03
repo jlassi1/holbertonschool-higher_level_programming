@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module"""
-import os
 
 
 def write_file(filename="", text=""):
