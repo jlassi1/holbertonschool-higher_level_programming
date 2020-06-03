@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module"""
-from sys import argv
 
 
 class Student:
