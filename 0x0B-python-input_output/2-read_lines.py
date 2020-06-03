@@ -9,6 +9,6 @@ def read_lines(filename="", nb_lines=0):
             while myfile.readline():
                 print(myfile.readline(), end="")
         i = 0
-        while i < nb_lines:
+        while i <= nb_lines:
             print(myfile.readline(), end="")
             i += 1
