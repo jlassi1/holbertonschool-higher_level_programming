@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module"""
-import os
 
 
 def read_file(filename=""):
