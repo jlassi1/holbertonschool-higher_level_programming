@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """module"""
 from sys import argv
-save = __import__("7-save_to_json_file").save_to_json_file
-load = __import__("8-load_from_json_file").load_from_json_file
 
 
 class Student:
+    """class Student """
     def __init__(self, first_name, last_name, age):
         """initialization method"""
         self.first_name = first_name
