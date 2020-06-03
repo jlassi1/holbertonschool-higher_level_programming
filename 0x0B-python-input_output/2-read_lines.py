@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module"""
-import os
 
 
 def read_lines(filename="", nb_lines=0):
@@ -8,8 +7,8 @@ def read_lines(filename="", nb_lines=0):
     with open(filename, encoding="UTF8") as myfile:
         if nb_lines <= 0:
             while myfile.readline():
-                print(myfile.readline())
+                print(myfile.readline(), end="")
         i = 0
         while i < nb_lines:
-            print(myfile.readline())
+            print(myfile.readline(), end="")
             i += 1
