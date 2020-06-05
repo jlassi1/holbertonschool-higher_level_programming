@@ -32,3 +32,33 @@ True
 Traceback (most recent call last):
 ...
 ValueError: num must be greater than 0
+
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> integer_validator(“age”, (4,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+>>> integer_validator("age", [3])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+>>> integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+>>> integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+>>> integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
