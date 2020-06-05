@@ -2,6 +2,9 @@
 
 
 >>> bg = BaseGeometry()
+>>> isinstance(bg, BaseGeometry)
+True
+
 >>> bg.integer_validator("my_int", 12)
 
 
@@ -25,8 +28,6 @@ Traceback (most recent call last):
 ...
 TypeError: num must be an integer
 
->>> isinstance(bg, BaseGeometry)
-True
 
 >>> bg.integer_validator("num", 0)
 Traceback (most recent call last):
