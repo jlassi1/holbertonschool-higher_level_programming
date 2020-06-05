@@ -37,3 +37,13 @@ True
 >>> l = MyList()
 >>> type(l) == MyList
 True
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+
+
+>>> my_list = MyList("str")
+>>> my_list.print_sorted()
+['r', 's', 't']
