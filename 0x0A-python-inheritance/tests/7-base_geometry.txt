@@ -38,27 +38,27 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
->>> integer_validator(“age”, (4,))
+>>> bg.integer_validator(“age”, (4,))
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
->>> integer_validator("age", [3])
+>>> bg.integer_validator("age", [3])
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
->>> integer_validator("age", True)
+>>> bg.integer_validator("age", True)
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
->>> integer_validator("age", {3, 4})
+>>> bg.integer_validator("age", {3, 4})
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
->>> integer_validator("age", None)
+>>> bg.integer_validator("age", None)
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
