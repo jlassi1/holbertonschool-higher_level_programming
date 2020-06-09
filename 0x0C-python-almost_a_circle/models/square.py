@@ -9,6 +9,8 @@ class Square(Rectangle):
         """initialization method"""
         self.size = size
         super().__init__(size, size, x, y, id)
+        self.height = size
+        self.width = size
 
     def __str__(self):
         """ the string return from class Square"""
