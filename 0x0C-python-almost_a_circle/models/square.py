@@ -22,7 +22,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """getter of size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -33,7 +33,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-        self.__size = value
+
 
     def update(self, *args, **kwargs):
         """"Update the class Square"""
