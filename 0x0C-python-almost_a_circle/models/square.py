@@ -9,8 +9,6 @@ class Square(Rectangle):
         """initialization method"""
         self.size = size
         super().__init__(size, size, x, y, id)
-        self.height = size
-        self.width = size
 
     def __str__(self):
         """ the string return from class Square"""
@@ -33,8 +31,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.width = value
-        self.height = value
+        super().width = value
+        super().height = value
         self.__size = value
 
     def update(self, *args, **kwargs):
