@@ -79,7 +79,7 @@ class Rectangle(Base):
         for j in range(self.y):
             print()
         for i in range(self.height):
-            print(" " * self.x, "#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """ the string return from class Rectangle"""
