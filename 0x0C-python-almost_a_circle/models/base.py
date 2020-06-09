@@ -48,7 +48,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """function that returns an instance with all attributes already set"""
-        dummy = cls(5, 5)
+        if cls.__name__ == Rectangle:
+            dummy = cls(5, 5)
+        elif cls.__name__ == Square:
+            dummy = cls(5)
         dummy.update(**dictionary)
         return dummy
 
@@ -65,3 +68,23 @@ class Base:
             return ls
         except Exception:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        new = []
+        if list_objs is not None:
+            for i in list_objs:
+                new.append(cls.to_dictionary(i))
+
+        filename = str(cls.__name__ + ".csv")
+
+        with open(filename, 'w') as f:
+            f.write(cls.to_json_string(new))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        if not json_string or json_string == "":
+            json_string = "[]"
+        return json.loads(json_string)
+    """
