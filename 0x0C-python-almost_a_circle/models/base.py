@@ -28,7 +28,7 @@ class Base:
         representation of list_objs to a file"""
 
         new = []
-        if list_objs not None:
+        if list_objs is not None:
             for i in list_objs:
                 new.append(cls.to_dictionary(i))
 
