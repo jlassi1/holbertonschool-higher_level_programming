@@ -45,7 +45,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """function that  returns an instance with all attributes already set"""
+        """function that returns an instance with all attributes already set"""
         dummy = cls(5, 5)
         dummy.update(**dictionary)
         return dummy
@@ -55,12 +55,10 @@ class Base:
         """ function that returns a list of instances"""
         name = str(cls.__name__) + '.json'
         try:
-            with open(name, 'r', encoding='utf-8') as f:
-                l = cls.from_json_string(f.read())
-                print(l)
+            with open(name, 'r+', encoding='utf-8') as f:
+                y = cls.from_json_string(f.read())
             ls = []
-            for instance in l:
-                print(instance)
+            for instance in y:
                 ls.append(cls.create(**instance))
             return ls
         except Exception:
