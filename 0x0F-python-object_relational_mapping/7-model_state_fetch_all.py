@@ -7,10 +7,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import scoped_session, sessionmaker
 import sys
-    
+
 Base = declarative_base()
 
 if __name__ == "__main__":
+    """ main function"""
     engine = create_engine('sqlite:///{}:{}@localhost:3306/{}'.format(
         sys.argv[3],
         sys.argv[2],
@@ -19,7 +20,7 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    session = scoped_session(sessionmaker(bind=engine))
-    for state in session.query(State).order_by(State.id).all():
+    session = sessionmaker(bind=engine)
+    for state in session().query(State).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
     session.close()
