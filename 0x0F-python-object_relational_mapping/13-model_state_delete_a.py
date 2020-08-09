@@ -19,6 +19,6 @@ if __name__ == "__main__":
 #    session.delete(state)
 
     session.query(State).order_by(
-                State.id).delete(State.name.like('%a%')).all()
+                State.id).delete().where(State.name.like('%a%')).all()
     session.commit()
     session.close()
