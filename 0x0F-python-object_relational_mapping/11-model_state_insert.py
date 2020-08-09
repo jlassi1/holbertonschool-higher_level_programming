@@ -16,6 +16,6 @@ if __name__ == "__main__":
     session = Session(engine)
     loui = State(name="Louisiana")
     session.add(loui)
-    session.rollback()
+    session.commit()
     print("{}".format(loui.id))
     session.close()
