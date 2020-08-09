@@ -15,6 +15,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
     state = session.insert(State).values(name == 'Louisiana')
+    conn = engine.connect()
+    conn.execute(state)
 
     print("{}".format(state.id))
     session.close()
