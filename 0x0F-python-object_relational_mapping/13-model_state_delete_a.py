@@ -14,11 +14,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-# for state in session.query(State).order_by(
-#               State.id).filter(State.name.like('%a%')).all():
-#    session.delete(state)
+    for state in session.query(State).order_by(
+               State.id).filter(State.name.like('%a%')).all():
+        session.delete(state)
 
-    session.query(State).order_by(
-                State.id).delete().where(State.name.like('%a%')).all()
     session.commit()
     session.close()
