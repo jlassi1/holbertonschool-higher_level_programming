@@ -8,7 +8,6 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import scoped_session, sessionmaker
 import sys
 
-Base = declarative_base()
 
 if __name__ == "__main__":
     """ main function"""
