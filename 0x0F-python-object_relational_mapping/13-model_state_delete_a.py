@@ -15,6 +15,6 @@ if __name__ == "__main__":
 
     session = Session(engine)
     for state in session.query(State).order_by(
-                  State.id).filter(State.name.like('%a%')):
+                  State.id).filter(State.name.like('%a%')).all():
         session.delete(state)
     session.close()
