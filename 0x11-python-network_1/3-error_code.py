@@ -9,6 +9,7 @@ import sys
 if __name__ == "__main__":
     req = Request(sys.argv[1])
     try:
-        response = urlopen(req)
+        with urlopen(req) as f:
+            print(f.read().decode())
     except HTTPError as e:
         print('Error code: ', e.code)
