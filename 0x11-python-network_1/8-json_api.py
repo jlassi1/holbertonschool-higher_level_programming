@@ -2,10 +2,10 @@
 """  A script that fetches URL """
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
+
     pram = {'q': ""}
     if len(sys.argv) == 2:
         pram['q'] = sys.argv[1]
