@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# a Python script that fetches https://intranet.hbtn.io/status
 """ A script that fetches URL  """
 import urllib.request
 
