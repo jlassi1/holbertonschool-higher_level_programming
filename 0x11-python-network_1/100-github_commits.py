@@ -14,5 +14,5 @@ if __name__ == "__main__":
             name = data[i].get("commit").get("author").get("name")
             id = data[i].get("sha")
             print("{}: {}".format(id, name))
-    Exception:
+    except:
         pass
