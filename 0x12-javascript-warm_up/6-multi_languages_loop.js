@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const arraystring = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-let i = 0;
-while (i < 3) {
-  console.log(arraystring[i]);
-  i++;
+const arraystring = ['Javascript is amazing', 'Python is cool', 'C is fun'];
+let lentharray = arraystring.length - 1;
+while (lentharray >= 0) {
+  console.log(arraystring[lentharray]);
+  lentharray--;
 }
