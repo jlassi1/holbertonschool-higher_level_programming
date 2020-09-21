@@ -4,22 +4,15 @@ class Rectangle {
     if (w <= 0 || h <= 0 || h === undefined || w === undefined) {
       return Rectangle === {};
     } else {
-      this.width = h;
-      this.height = w;
+      this.width = w;
+      this.height = h;
     }
   }
 
   print () {
-    let str = '';
-    for (let w = 1; w <= this.width; w++) {
-      for (let h = 1; h <= this.height; h++) {
-        str += 'X';
-      }
-      if (w !== this.width) {
-        str += '\n';
-      }
+    for (let j = 0; j < this.height; j++) {
+      console.log('X'.repeat(this.width));
     }
-    console.log(str);
   }
 }
 
